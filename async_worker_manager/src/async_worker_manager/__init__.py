@@ -22,7 +22,7 @@ async def worker(name, queue, handler, timeout=0, timeout_cb=None):
                 try:
                     await timeout_cb(task)
                 except Exception as e:
-                    logger.warning(f"{name}: Error on timeout callback: {task}")
+                    logger.warning(f"{name}: Error on timeout callback: {task}, {e}")
         except Exception as e:
             logger.exception(f"{name}: Error processing message: {e}")
         finally:
@@ -62,4 +62,3 @@ class AsyncWorkerManager:
             await self.queue.put_nowait(task)
         else:
             await self.queue.put(task)
-        

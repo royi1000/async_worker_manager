@@ -5,13 +5,14 @@ description = "Asyncio Queues and Workers wrapper"
 authors = ["Royi Reshef"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest-asyncio = "^0.21.1"
+flake8 = "^6.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
