@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "async_worker_manager"
+version = "1.0.0"
+description = "Asyncio Queues and Workers wrapper"
+authors = ["Royi Reshef"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest-asyncio = "^0.21.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
